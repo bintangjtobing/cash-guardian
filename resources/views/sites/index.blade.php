@@ -10,6 +10,10 @@
 @endsection
 
 @section('content')
+    @if (session('success'))
+        {!! showSuccessToast(session('success')) !!}
+        {{ Session::forget('success') }}
+    @endif
     <div class="col-lg-12 mb-25">
         <div class="social-overview-wrap">
             <div class="card border-0">

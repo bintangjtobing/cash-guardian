@@ -1,4 +1,12 @@
-
+body.swal2-toast-shown .swal2-container{
+    z-index: 9999;
+}
+.swal2-popup.swal2-toast .swal2-title{
+    font-size: .8rem !important;
+    margin-top: .7em !important;
+    margin-left: .7em !important;
+    font-weight: 400 !important;
+}
 .m-top-0 {
   margin-top: 0px;
 }
@@ -3827,7 +3835,7 @@ ul {
   width: 100%;
   left: 0;
   top: 0;
-  z-index: 9988;
+  z-index: 7000;
   background: #fff;
   box-shadow: 0px 2px 30px rgba(146, 153, 184, 0.1019607843);
 }

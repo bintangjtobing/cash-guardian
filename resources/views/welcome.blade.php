@@ -27,7 +27,13 @@
     <link rel="stylesheet" href="{{ asset('assets/vendor_assets/css/trumbowyg.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendor_assets/css/wickedpicker.min.css') }}">
     <link rel="stylesheet" href="{{ asset('style.css') }}">
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="
+        https://cdn.jsdelivr.net/npm/sweetalert2@11.10.7/dist/sweetalert2.all.min.js
+        "></script>
+    <link href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.10.7/dist/sweetalert2.min.css
+    " rel="stylesheet">
 
     <!-- endinject -->
 
@@ -78,7 +84,6 @@
 
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDduF2tLXicDEPDMAtC6-NLOekX0A5vlnY"></script>
     <!-- inject:js-->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="{{ asset('assets/vendor_assets/js/jquery/jquery-3.5.1.min.js') }}"></script>
     <script src="{{ asset('assets/vendor_assets/js/jquery/jquery-ui.js') }}"></script>
     <script src="{{ asset('assets/vendor_assets/js/bootstrap/popper.js') }}"></script>

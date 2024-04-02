@@ -9,7 +9,12 @@
                         <h6 class="ratio-title" style="margin-bottom:1rem;">Total Income</h6>
                         <div class="ratio-info d-flex justify-content-between align-items-center">
                             <h3 class="ratio-point" style="font-size:26px !important;">Rp.
-                                {{ number_format($totalIncome, 2, ',', '.') }}</h1>
+                                @if ($totalIncome < 0)
+                                    <span style="color: red;">{{ number_format($totalIncome, 2, ',', '.') }}</span>
+                                @else
+                                    {{ number_format($totalIncome, 2, ',', '.') }}
+                                @endif
+                            </h3>
                         </div>
                     </div>
                 </div>
@@ -21,8 +26,12 @@
                         <h6 class="ratio-title" style="margin-bottom:1rem;">Total Expenses</h6>
                         <div class="ratio-info d-flex justify-content-between align-items-center">
                             <h3 class="ratio-point" style="font-size:26px !important;">Rp.
-                                {{ number_format($totalExpenses, 2, ',', '.') }}
-                                </h1>
+                                @if ($totalExpenses < 0)
+                                    <span style="color: red;">{{ number_format($totalExpenses, 2, ',', '.') }}</span>
+                                @else
+                                    {{ number_format($totalExpenses, 2, ',', '.') }}
+                                @endif
+                            </h3>
                         </div>
                     </div>
                 </div>
@@ -34,7 +43,12 @@
                         <h6 class="ratio-title" style="margin-bottom:1rem;">Net Profit</h6>
                         <div class="ratio-info d-flex justify-content-between align-items-center">
                             <h3 class="ratio-point" style="font-size:26px !important;">Rp.
-                                {{ number_format($profit, 2, ',', '.') }}</h1>
+                                @if ($profit < 0)
+                                    <span style="color: red;">{{ number_format($profit, 2, ',', '.') }}</span>
+                                @else
+                                    {{ number_format($profit, 2, ',', '.') }}
+                                @endif
+                            </h3>
                         </div>
                     </div>
                 </div>
@@ -46,9 +60,9 @@
                         <h6 class="ratio-title" style="margin-bottom:1rem;">Current Ratio</h6>
                         <div class="ratio-info d-flex justify-content-between align-items-center">
                             <h1 class="ratio-point" style="font-size:26px !important;">
-                                {{ number_format(($totalIncome - $totalExpenses) / $totalIncome, 2, ',', '.') }}</h1>
-                            <span
-                                class="ratio-percentage color-warning">{{ number_format(($profit / $totalIncome) * 100, 2, ',', '.') }}%</span>
+                                {{ number_format(($totalIncome - $totalExpenses) / $totalIncome, 2, ',', '.') }}</h3>
+                                <span
+                                    class="ratio-percentage color-warning">{{ number_format(($profit / $totalIncome) * 100, 2, ',', '.') }}%</span>
                         </div>
                     </div>
                 </div>
