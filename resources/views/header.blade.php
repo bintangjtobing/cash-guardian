@@ -4,7 +4,7 @@
         <div class="navbar-left">
             <a href="/" class="sidebar-toggle">
                 <img class="svg" src="{{ asset('img/svg/bars.svg') }}" alt="Logo MileageMaster"></a>
-            <a class="navbar-brand" href="#"><img class="dark" style="max-width: 175px;"
+            <a class="navbar-brand" href="/"><img class="dark" style="max-width: 175px;"
                     src="https://www.pondoklensa.com/app/Web/Assets/apps/images/logo.png" alt="svg"><img
                     class="light" style="max-width: 175px;"
                     src="https://www.pondoklensa.com/app/Web/Assets/apps/images/logo.png" alt="Logo MileageMaster"></a>
