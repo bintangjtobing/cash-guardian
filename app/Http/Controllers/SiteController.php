@@ -43,8 +43,8 @@ class SiteController extends Controller
     public function edit($id)
     {
         $site = Site::findOrFail($id);
-
-        return view('sites.edit', compact('site'));
+        $areas = Area::all();
+        return view('sites.edit', compact('site','areas'));
     }
 
     public function update(Request $request, $id)

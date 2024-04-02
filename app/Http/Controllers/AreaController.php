@@ -40,9 +40,9 @@ class AreaController extends Controller
 
     public function edit($id)
     {
-        $area = Area::findOrFail($id);
-
-        return view('areas.edit', compact('area'));
+        $area = Area::with('city')->findOrFail($id);
+        $cities = City::all();
+        return view('areas.edit', compact('area', 'cities'));
     }
 
     public function update(Request $request, $id)

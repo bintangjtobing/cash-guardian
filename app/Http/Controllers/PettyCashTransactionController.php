@@ -114,14 +114,14 @@ class PettyCashTransactionController extends Controller
 
         $transaction->save();
 
-        return redirect()->route('petty_cash_transactions.index')->with('success', 'Petty Cash Transaction updated successfully.');
+        return redirect()->route('petty-cash-transactions.index')->with('success', 'Petty Cash Transaction updated successfully.');
     }
 
     public function destroy($id)
     {
         $transaction = PettyCashTransaction::findOrFail($id);
         $transaction->delete();
-        return redirect()->route('petty_cash_transactions.index')->with('success', 'Petty Cash Transaction deleted successfully.');
+        return redirect()->route('petty-cash-transactions.index')->with('success', 'Petty Cash Transaction deleted successfully.');
     }
 }
 

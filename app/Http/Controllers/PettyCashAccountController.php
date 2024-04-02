@@ -59,7 +59,7 @@ class PettyCashAccountController extends Controller
 
         $account->update($request->all());
 
-        return redirect()->route('petty_cash_accounts.index')->with('success', 'Petty Cash Account updated successfully.');
+        return redirect()->route('petty-cash-accounts.index')->with('success', 'Petty Cash Account updated successfully.');
     }
 
     public function destroy($id)
@@ -68,7 +68,7 @@ class PettyCashAccountController extends Controller
 
         $account->delete();
 
-        return redirect()->route('petty_cash_accounts.index')->with('success', 'Petty Cash Account deleted successfully.');
+        return redirect()->route('petty-cash-accounts.index')->with('success', 'Petty Cash Account deleted successfully.');
     }
 }
 

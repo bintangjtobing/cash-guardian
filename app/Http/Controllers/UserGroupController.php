@@ -54,7 +54,7 @@ class UserGroupController extends Controller
 
         $group->update($request->all());
 
-        return redirect()->route('user_groups.index')->with('success', 'User Group updated successfully.');
+        return redirect()->route('user-groups.index')->with('success', 'User Group updated successfully.');
     }
 
     public function destroy($id)
@@ -63,6 +63,6 @@ class UserGroupController extends Controller
 
         $group->delete();
 
-        return redirect()->route('user_groups.index')->with('success', 'User Group deleted successfully.');
+        return redirect()->route('user-groups.index')->with('success', 'User Group deleted successfully.');
     }
 }

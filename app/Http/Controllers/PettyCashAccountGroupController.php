@@ -53,7 +53,7 @@ class PettyCashAccountGroupController extends Controller
 
         $group->update($request->all());
 
-        return redirect()->route('petty_cash_account_groups.index')->with('success', 'Petty Cash Account Group updated successfully.');
+        return redirect()->route('petty-cash-account-groups.index')->with('success', 'Petty Cash Account Group updated successfully.');
     }
 
     public function destroy($id)
@@ -62,7 +62,7 @@ class PettyCashAccountGroupController extends Controller
 
         $group->delete();
 
-        return redirect()->route('petty_cash_account_groups.index')->with('success', 'Petty Cash Account Group deleted successfully.');
+        return redirect()->route('petty-cash-account-groups.index')->with('success', 'Petty Cash Account Group deleted successfully.');
     }
 }
 

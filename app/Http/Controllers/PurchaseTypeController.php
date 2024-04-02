@@ -55,7 +55,7 @@ class PurchaseTypeController extends Controller
 
         $purchaseType->update($request->all());
 
-        return redirect()->route('purchase_types.index')->with('success', 'Purchase Type updated successfully.');
+        return redirect()->route('purchase-types.index')->with('success', 'Purchase Type updated successfully.');
     }
 
     public function destroy($id)
@@ -64,7 +64,7 @@ class PurchaseTypeController extends Controller
 
         $purchaseType->delete();
 
-        return redirect()->route('purchase_types.index')->with('success', 'Purchase Type deleted successfully.');
+        return redirect()->route('purchase-types.index')->with('success', 'Purchase Type deleted successfully.');
     }
 }
 
