@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             SiteSeeder::class,
             PettyCashSeeder::class,
             PurchaseTypeSeeder::class,
+            PettyCashTransactions::class,
         ]);
     }
 }

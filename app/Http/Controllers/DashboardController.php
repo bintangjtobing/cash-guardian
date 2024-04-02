@@ -8,7 +8,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $transactions = PettyCashTransaction::with('pettyCashAccount', 'purchaseType', 'site.area')->orderBy('created_at', 'desc')->get();
+        $transactions = PettyCashTransaction::with('pettyCashAccount', 'purchaseType', 'site.area')->orderBy('created_at', 'desc')->paginate(5);
         // Hitung total pendapatan (income)
         $totalIncome = PettyCashTransaction::whereHas('purchaseType', function ($query) {
             $query->where('transaction_type', 'income');
